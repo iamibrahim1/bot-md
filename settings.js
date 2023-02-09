@@ -4,8 +4,8 @@ import { fileURLToPath } from 'url'
 import path from 'path'
 
 const owner = [
-  ['6282140373458'],
-  ['62895336282144', 'owner', true ]
+  ['923229931076'],
+  ['923229931076', 'owner', true ]
 ] // Put your number here
 const mods = [] // Want some help?
 const prems = [] // Premium user has unlimited limit
@@ -41,11 +41,11 @@ const APIKeys = { // APIKey Here
 const API = (name, path = '/', query = {}, apikeyqueryname) => (name in APIs ? APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: APIKeys[name in APIs ? APIs[name] : name] } : {}) })) : '')
 
 // Sticker WM
-const packname = '@Shano-Bot'
-const author = 'The.sad.boy01'
-const wm = '© The.sad.boy01'
+const packname = '@Ibrahim'
+const author = 'Ibrahim'
+const wm = '© Ibrahim'
 
-const multiplier = 1000 // The higher, The harder levelup
+const multiplier = 100000000 // The higher, The harder levelup
 
 const rpg = {
   emoticon(string) {
@@ -83,18 +83,18 @@ const rpg = {
 
 const dfail = (type, m, conn) => {
     let msg = {
-        rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
-        owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
-        mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-        premium: '*Premium*\n1 Months *IDR 10000*\n1 Years *IDR 90000*\n\nHubungi *owner* kami..', 
-        banned: 'Perintah ini hanya untuk pengguna yang terbanned..',
-        created: 'Perintah ini hanya pengguna yang sudah membuat base\nContoh: #createbase Aine',
-        group: 'Perintah ini hanya dapat digunakan di grup!',
-        private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-        admin: 'Perintah ini hanya untuk *Admin* grup!',
-        botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*',
-        restrict: 'Fitur ini di *disable*!'
+    rowner: 'This command can only be used by _*OWWNER!1!1!*_',
+         owner: 'This command can only be used by _*Owner Bot*_!',
+         mods: 'This command can only be used by _*Moderator*_ !',
+         premium: '*Premium*\n1 Months *Pkr 500*\n1 Years *IDR 5000*\n\nContact our *owner*..',
+         banned: 'This command is only for banned users..',
+         created: 'This command only creates a base\nExample: #createbase Aine',
+         group: 'This command can only be used in groups!',
+         private: 'This command can only be used in Private Chats!',
+         admin: 'This command is only for *Admins* of the group!',
+         botAdmin: 'Make bot *Admin* to use this command!',
+         unreg: 'Please register to use this feature by typing:\n\n*#list of names.age*\n\nExample: *#list of Humans.16*',
+         restrict: 'This feature is *disabled*!'
     }[type]
     if (msg) return m.reply(msg)
  
